@@ -1,33 +1,50 @@
 #include <stdlib.h>
+
 #include <time.h>
+
 #include <stdio.h>
 
-
-/* more headers goes there */
-/* betty style doc for function main goes there */
+/**
+ *
+ ** main - Program Entry point
+ *
+ **
+ *
+ ** Description: A program to determine wether an int is +ve, -ve or 0
+ *
+ **
+ *
+ ** Return: 0 indicates success
+ *
+ **/
 
 int main(void)
+
 {
-int n;
 
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-/* your code goes there */
-printf("last digit of %d is ", n);
-	if (n > 5)
-	{
-		printf(" greater than 5");
-	}
-	if (n == 0)
-	{
-		printf("0");
-	}
-	if (n < 6 && n != 0)
-	{
-		printf("less than 6 not 0");
-	}
+	int n, last;
 
-printf("\n");
+	srand(time(0));
 
-return (0);
+	 = rand() - RAND_MAX / 2;
+
+	/* your code goes there */
+
+
+
+	last = n % 10;
+
+	if (last >= 6)
+
+	printf("Last digit of %d is %d and is greater than 5\n", n, n % 10);
+
+	else if (last < 6 && last != 0)
+	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, n % 10);
+
+	else
+
+	printf("Last digit of %d is 0 and is 0\n", n);
+
+	return (0);
+
 }
